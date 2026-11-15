@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import PageHeader from '@/components/PageHeader';
-import { coverSubtitle, services, steps, turnkeyFoot, turnkeyLead } from '@/lib/content';
+import { coverSubtitle, cycleStages, services, turnkeyParagraphs } from '@/lib/content';
 
 export const metadata: Metadata = {
   title: 'Работы',
@@ -12,12 +12,7 @@ export const metadata: Metadata = {
 export default function WorksPage() {
   return (
     <>
-      <PageHeader
-        index="01"
-        kicker="Работы"
-        title="Что мы делаем"
-        lede={coverSubtitle}
-      />
+      <PageHeader index="01" kicker="Работы" title="Что мы делаем" lede={coverSubtitle} />
       <section className="section">
         <div className="wrap">
           <div className="rule-list">
@@ -37,17 +32,21 @@ export default function WorksPage() {
             <p className="index-no">02</p>
             <h2>Объект под ключ</h2>
           </div>
-          <p className="section-lead block-lead">{turnkeyLead}</p>
-          <div className="steps">
-            {steps.map((step) => (
-              <article className="step" key={step.num}>
-                <div className="step-num">{step.num}</div>
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
+          <div className="cycle-lead">
+            {turnkeyParagraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+          <div className="cycle">
+            {cycleStages.map((stage) => (
+              <article key={stage.num}>
+                <h3>
+                  <span className="num">{stage.num}</span> {stage.title}
+                </h3>
+                <p>{stage.text}</p>
               </article>
             ))}
           </div>
-          <p className="foot-note">{turnkeyFoot}</p>
         </div>
       </section>
     </>

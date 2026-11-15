@@ -20,13 +20,19 @@ export default function CompanyPage() {
   return (
     <>
       <PageHeader index="03" kicker="Компания" title="О компании" lede={aboutLead} />
-      <section className="stats" aria-label="Цифры портфеля">
+      <section className="stats" aria-label="Коротко о компании">
         <div className="wrap stats-grid">
           {stats.map((item) => (
-            <div className="stat" key={item.num}>
-              <div className="stat-num">{item.num}</div>
-              <div className="stat-unit">{item.unit}</div>
-              <p className="stat-cap">{item.caption}</p>
+            <div className="stat" key={item.id}>
+              {'num' in item ? (
+                <>
+                  <div className="stat-num">{item.num}</div>
+                  <div className="stat-unit">{item.unit}</div>
+                  <p className="stat-cap">{item.caption}</p>
+                </>
+              ) : (
+                <p className="stat-phrase">{item.text}</p>
+              )}
             </div>
           ))}
         </div>

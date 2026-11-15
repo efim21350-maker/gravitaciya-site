@@ -6,14 +6,12 @@ import {
   coverLead,
   coverSubtitle,
   customers,
-  homeHighlights,
+  cycleStages,
   resourceFoot,
   services,
   stats,
-  steps,
-  trustFoot,
   trustLead,
-  turnkeyLead,
+  turnkeyParagraphs,
 } from '@/lib/content';
 
 export default function HomePage() {
@@ -32,7 +30,7 @@ export default function HomePage() {
               src="/brand/mark.png"
               width={960}
               height={467}
-              alt="Знак ООО «Гравитация»: кольцо и труба в траншее"
+              alt="Знак ООО «Гравитация»"
             />
             <div className="plate-meta">
               <span>Знак</span>
@@ -42,13 +40,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="stats" aria-label="Цифры портфеля">
+      <section className="stats" aria-label="Коротко о компании">
         <div className="wrap stats-grid">
           {stats.map((item) => (
-            <div className="stat" key={item.unit + item.num}>
-              <div className="stat-num">{item.num}</div>
-              <div className="stat-unit">{item.unit}</div>
-              <p className="stat-cap">{item.caption}</p>
+            <div className="stat" key={item.id}>
+              {'num' in item ? (
+                <>
+                  <div className="stat-num">{item.num}</div>
+                  <div className="stat-unit">{item.unit}</div>
+                  <p className="stat-cap">{item.caption}</p>
+                </>
+              ) : (
+                <p className="stat-phrase">{item.text}</p>
+              )}
             </div>
           ))}
         </div>
@@ -87,7 +91,6 @@ export default function HomePage() {
               </article>
             ))}
           </div>
-          <p className="foot-note">{trustFoot}</p>
         </div>
       </section>
 
@@ -95,49 +98,30 @@ export default function HomePage() {
         <div className="wrap">
           <div className="section-head">
             <p className="index-no">03</p>
-            <h2>Ключевые объекты</h2>
-          </div>
-          <div className="rule-list">
-            {homeHighlights.map((item) => (
-              <Link className="highlight" href={item.href} key={item.href}>
-                <h3>{item.title}</h3>
-                <p className="amount">{item.amount}</p>
-                <p className="meta">{item.meta}</p>
-              </Link>
-            ))}
-          </div>
-          <Link className="more" href="/obekty/#reestr">
-            Реестр объектов
-          </Link>
-        </div>
-      </section>
-
-      <section className="section paper">
-        <div className="wrap">
-          <div className="section-head">
-            <p className="index-no">04</p>
             <h2>Объект под ключ</h2>
           </div>
-          <p className="section-lead block-lead">{turnkeyLead}</p>
-          <div className="steps">
-            {steps.map((step) => (
-              <article className="step" key={step.num}>
-                <div className="step-num">{step.num}</div>
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
+          <div className="cycle-lead">
+            {turnkeyParagraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+          <div className="cycle">
+            {cycleStages.map((stage) => (
+              <article key={stage.num}>
+                <h3>
+                  <span className="num">{stage.num}</span> {stage.title}
+                </h3>
+                <p>{stage.text}</p>
               </article>
             ))}
           </div>
-          <p className="foot-note">
-            <Link href="/raboty/#cikl">Состав цикла</Link>
-          </p>
         </div>
       </section>
 
       <section className="section">
         <div className="wrap">
           <div className="section-head">
-            <p className="index-no">05</p>
+            <p className="index-no">04</p>
             <h2>О компании</h2>
           </div>
           <p className="section-lead block-lead">{aboutLead}</p>

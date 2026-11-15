@@ -7,9 +7,7 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="wrap footer-grid">
-        <div className="logo-plate">
-          <img src="/brand/logo.png" width={880} height={616} alt="ООО «Гравитация»" />
-        </div>
+        <img className="footer-logo" src="/brand/logo-white.png" width={880} height={616} alt="Гравитация" />
         <div>
           <p className="footer-kicker">Документы</p>
           <p>ИНН {company.inn}</p>

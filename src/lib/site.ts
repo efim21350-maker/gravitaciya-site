@@ -29,16 +29,16 @@ export function publicOrigin(): string | undefined {
 }
 
 export const SITE = {
-  name: 'ООО «Гравитация»',
+  name: 'Гравитация',
   trailingSlash: true,
-  title: 'ООО «Гравитация» — благоустройство, дороги, земляные и подготовительные работы',
+  title: 'Гравитация — благоустройство, дороги, земляные и подготовительные работы',
   description:
     'Подрядная организация с 2021 года: благоустройство, дорожное строительство, земляные работы и подготовка территории в Санкт-Петербурге, Ленинградской области и на Северо-Западе.',
 } as const;
 
 export const nav = [
   { href: '/raboty', label: 'Работы' },
-  { href: '/obekty', label: 'Объекты' },
   { href: '/kompaniya', label: 'Компания' },
+  { href: '/vakansii', label: 'Вакансии' },
   { href: '/kontakty', label: 'Контакты' },
 ] as const;
