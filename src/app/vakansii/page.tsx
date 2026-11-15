@@ -3,10 +3,11 @@ import Link from 'next/link';
 
 import PageHeader from '@/components/PageHeader';
 import { company } from '@/lib/content';
+import { SITE } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Наши вакансии',
-  description: 'Требуется производитель работ.',
+  description: SITE.description,
 };
 
 export default function VacanciesPage() {
