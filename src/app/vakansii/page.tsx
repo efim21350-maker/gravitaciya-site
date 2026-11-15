@@ -17,13 +17,13 @@ export default function VacanciesPage() {
         <div className="wrap">
           <div className="vacancy-list">
             <article className="vacancy">
-              <h2>Требуется производитель работ</h2>
+              <h2>Производитель работ</h2>
               <div className="vacancy-actions">
                 <Link className="apply" href="/kontakty/#obratnaya-svyaz">
                   Откликнуться
                 </Link>
                 <p>
-                  или напишите на <a href={`mailto:${company.email}`}>{company.email}</a>
+                  или напишите нам на почту <a href={`mailto:${company.email}`}>{company.email}</a>
                 </p>
               </div>
             </article>
