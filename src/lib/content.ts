@@ -68,7 +68,7 @@ export const cycleStages = [
 
 export const stats = [
   { id: 'place', text: 'Объекты в Санкт-Петербурге и Ленинградской области' },
-  { id: 'customers', text: 'Наши заказчики' },
+  { id: 'customers', text: 'Наши заказчики нам доверяют' },
   { id: 'years', num: '5', unit: 'лет', caption: 'на рынке: работаем с 2021 года' },
 ] as const;
 

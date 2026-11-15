@@ -41,7 +41,7 @@ export default function CompanyPage() {
         <div className="wrap">
           <div className="section-head">
             <p className="index-no">01</p>
-            <h2>Допуск и реквизиты</h2>
+            <h2>Реквизиты</h2>
           </div>
           <dl className="spec">
             <div className="spec-row">

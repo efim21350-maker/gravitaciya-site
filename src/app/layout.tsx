@@ -63,7 +63,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ru" className={`${display.variable} ${sans.variable}`}>
       <body>
         <div className="watermark" aria-hidden="true">
-          <span>Гравитация</span>
+          <div className="watermark-lockup">
+            <img src="/brand/mark-watermark.png" alt="" width={960} height={467} />
+            <span>Гравитация</span>
+          </div>
         </div>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <a className="skip" href="#main">
