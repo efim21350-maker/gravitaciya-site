@@ -4,7 +4,7 @@ import { IBM_Plex_Sans, Sofia_Sans_Condensed } from 'next/font/google';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { company } from '@/lib/content';
-import { SITE } from '@/lib/site';
+import { publicOrigin, SITE } from '@/lib/site';
 
 import './globals.css';
 
@@ -28,8 +28,10 @@ export const viewport: Viewport = {
   themeColor: '#000E69',
 };
 
+const origin = publicOrigin();
+
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE.origin),
+  ...(origin ? { metadataBase: new URL(origin) } : {}),
   title: {
     default: SITE.title,
     template: `%s — ${SITE.name}`,
@@ -48,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     '@type': 'Organization',
     name: company.shortName,
     taxID: company.inn,
-    url: SITE.origin,
+    ...(origin ? { url: origin } : {}),
     address: {
       '@type': 'PostalAddress',
       addressLocality: company.city,

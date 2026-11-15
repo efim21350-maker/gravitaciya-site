@@ -1,17 +1,17 @@
 import type { MetadataRoute } from 'next';
 
-import { SITE } from '@/lib/site';
+import { publicOrigin } from '@/lib/site';
 
 export const dynamic = 'force-static';
 
 export default function robots(): MetadataRoute.Robots {
-  const base = SITE.origin.replace(/\/$/, '');
+  const origin = publicOrigin();
 
   return {
     rules: {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: `${base}/sitemap.xml`,
+    ...(origin ? { sitemap: `${origin}/sitemap.xml` } : {}),
   };
 }
