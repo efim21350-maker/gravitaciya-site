@@ -22,7 +22,7 @@ export default function Header() {
           <img src="/brand/mark.png" width={960} height={467} alt="" />
           <span>
             <span className="brand-name">{company.wordmark}</span>
-            <span className="brand-meta">ООО · {company.city}</span>
+            <span className="brand-meta">{company.city}</span>
           </span>
         </Link>
         <nav className="nav" aria-label="Разделы">
