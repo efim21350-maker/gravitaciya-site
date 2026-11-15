@@ -8,6 +8,7 @@ export const company = {
   coverName: 'ООО «ГРАВИТАЦИЯ»',
   wordmark: 'Гравитация',
   inn: '7842189617',
+  email: 'gravity_company@mail.ru',
   city: 'Санкт-Петербург',
   sinceYear: '2021',
   coverLine: 'Санкт-Петербург · 2021',

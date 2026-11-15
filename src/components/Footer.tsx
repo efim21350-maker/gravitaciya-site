@@ -19,6 +19,10 @@ export default function Footer() {
           <p className="footer-kicker">База</p>
           <p>Производственная база: {company.base}</p>
           <p>{company.city}</p>
+          <p className="footer-kicker footer-mail">Почта</p>
+          <p>
+            <a href={`mailto:${company.email}`}>{company.email}</a>
+          </p>
         </div>
         <nav className="footer-nav" aria-label="Разделы в подвале">
           {nav.map((item) => (

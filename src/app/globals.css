@@ -762,6 +762,19 @@ h2.later {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
 
+.vacancy-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.vacancy-actions p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .apply {
   display: inline-flex;
   align-items: center;
@@ -799,6 +812,10 @@ h2.later {
   display: block;
   width: min(280px, 100%);
   height: auto;
+}
+
+.footer-mail {
+  margin-top: 18px;
 }
 
 .footer-kicker {
@@ -935,6 +952,10 @@ h2.later {
   .vacancy {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .vacancy-actions {
+    align-items: flex-start;
   }
 }
 

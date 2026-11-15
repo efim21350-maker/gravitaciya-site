@@ -49,6 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: company.shortName,
+    email: company.email,
     taxID: company.inn,
     ...(origin ? { url: origin } : {}),
     address: {

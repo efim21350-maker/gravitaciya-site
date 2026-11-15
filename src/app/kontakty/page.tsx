@@ -51,7 +51,9 @@ export default function ContactsPage() {
             </div>
             <div className="spec-row">
               <dt>Почта</dt>
-              <dd className="blank" />
+              <dd>
+                <a href={`mailto:${company.email}`}>{company.email}</a>
+              </dd>
             </div>
           </dl>
         </div>
