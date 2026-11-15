@@ -25,18 +25,6 @@ export default function HomePage() {
             <p className="lede">{coverLead}</p>
             <p className="scope-line">{coverSubtitle}</p>
           </div>
-          <div className="hero-plate">
-            <img
-              src="/brand/mark.png"
-              width={960}
-              height={467}
-              alt="Знак ООО «Гравитация»"
-            />
-            <div className="plate-meta">
-              <span>Знак</span>
-              <span>{company.coverLine}</span>
-            </div>
-          </div>
         </div>
       </section>
 

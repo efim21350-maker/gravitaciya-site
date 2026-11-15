@@ -61,6 +61,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ru" className={`${display.variable} ${sans.variable}`}>
       <body>
+        <div className="watermark" aria-hidden="true">
+          <span>Гравитация</span>
+        </div>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <a className="skip" href="#main">
           К содержанию

@@ -1,21 +1,17 @@
 import type { Metadata } from 'next';
 
 import PageHeader from '@/components/PageHeader';
-import { company, missingContacts } from '@/lib/content';
+import { company } from '@/lib/content';
 
 export const metadata: Metadata = {
   title: 'Контакты',
-  description: 'ИНН, город и производственная база ООО «Гравитация». Телефон, почта и юридический адрес в портфолио не указаны.',
+  description: 'Город, производственная база и ИНН ООО «Гравитация».',
 };
 
 export default function ContactsPage() {
   return (
     <>
-      <PageHeader
-        index="04"
-        kicker="Контакты"
-        title="Контакты"
-      />
+      <PageHeader index="04" kicker="Контакты" title="Контакты" />
       <section className="section">
         <div className="wrap">
           <h2>Что указано</h2>
@@ -44,14 +40,19 @@ export default function ContactsPage() {
             </div>
           </dl>
 
-          <h2 className="later">Нет в портфолио</h2>
+          <h2 className="later" id="obratnaya-svyaz">
+            Обратная связь
+          </h2>
+          <p className="feedback-line">Напишите или позвоните нам — ответим.</p>
           <dl className="spec">
-            {missingContacts.map((item) => (
-              <div className="spec-row todo" key={item.label}>
-                <dt>{item.label}</dt>
-                <dd>{item.value}</dd>
-              </div>
-            ))}
+            <div className="spec-row">
+              <dt>Телефон</dt>
+              <dd className="blank" />
+            </div>
+            <div className="spec-row">
+              <dt>Почта</dt>
+              <dd className="blank" />
+            </div>
           </dl>
         </div>
       </section>
