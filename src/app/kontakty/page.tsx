@@ -14,7 +14,6 @@ export default function ContactsPage() {
       <PageHeader index="04" kicker="Контакты" title="Контакты" />
       <section className="section">
         <div className="wrap">
-          <h2>Что указано</h2>
           <dl className="spec">
             <div className="spec-row">
               <dt>Организация</dt>
@@ -43,12 +42,8 @@ export default function ContactsPage() {
           <h2 className="later" id="obratnaya-svyaz">
             Обратная связь
           </h2>
-          <p className="feedback-line">Напишите или позвоните нам — ответим.</p>
+          <p className="feedback-line">Напишите нам — ответим.</p>
           <dl className="spec">
-            <div className="spec-row">
-              <dt>Телефон</dt>
-              <dd className="blank" />
-            </div>
             <div className="spec-row">
               <dt>Почта</dt>
               <dd>
